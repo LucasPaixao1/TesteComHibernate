@@ -12,13 +12,11 @@ public class UsuarioDAO {
 	
 	public UsuarioDAO(){
 		em = new UtilJPA().getEntityManager();
-		
+		em.getTransaction().begin();
 	}
 	
 	public boolean verificaExistencia() {
-		
-		em.getTransaction().begin();
-		
+
 		Usuario usuario= em.find(Usuario.class, 1);
 		ValidaUsuario validaUsuario = new ValidaUsuario();
 		
@@ -27,8 +25,6 @@ public class UsuarioDAO {
 	}
 	
 	public boolean verificaUsuario(Usuario usuario) {
-		
-		em.getTransaction().begin();
 		
 		boolean retorno = false;
 		
@@ -40,6 +36,13 @@ public class UsuarioDAO {
 		}
 		
 		return retorno;
+		
+	}
+
+	public void cadastraUsuario(Usuario usuario) {
+		
+		em.persist(usuario);
+		em.getTransaction().commit();
 		
 	}
 	
