@@ -1,6 +1,5 @@
 package com.majority.executaveis;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 import com.majority.dao.UsuarioDAO;
@@ -47,6 +46,8 @@ public class Index {
 			}
 
 		}
+		
+		s.close();
 	}
 
 	public static void limpaTela() {

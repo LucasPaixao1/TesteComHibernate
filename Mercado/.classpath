@@ -14,5 +14,6 @@
 	<classpathentry kind="lib" path="lib/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
 	<classpathentry kind="lib" path="lib/mysql-connector-java-8.0.11.jar"/>
 	<classpathentry kind="lib" path="lib/postgresql-9.2-1002.jdbc4.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-jpa-2.11.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

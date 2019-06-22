@@ -32,6 +32,7 @@ public class CadastroDeUsuario {
 			
 		}
 		
+		s.close();
 		
 
 	}

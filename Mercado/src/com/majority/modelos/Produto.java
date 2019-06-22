@@ -19,6 +19,7 @@ public class Produto {
 	private String categoria;
 	private String tipoCalculo;
 	private BigDecimal valor;
+	private BigDecimal quantidade;
 	
 	public Integer getId() {
 		return id;
@@ -67,5 +68,14 @@ public class Produto {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
+
+	public BigDecimal getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(BigDecimal quantidade) {
+		this.quantidade = quantidade;
+	}
+	
 	
 }
