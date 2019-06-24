@@ -1,8 +1,10 @@
 package com.majority.dao;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import com.majority.UtilJPA.UtilJPA;
 import com.majority.modelos.Produto;
@@ -48,6 +50,13 @@ public class EstoqueDAO {
 		System.out.println("\n===================================");
 		System.out.println("* Venda Registrada com Sucesso!!! *");
 		System.out.println("===================================");
+	}
+
+	public List<Venda> listarVendas() {
+		Query query = em.createQuery("select v from Venda v");
+		List<Venda> vendas = query.getResultList();
+		
+		return vendas;
 	}
 
 }

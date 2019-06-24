@@ -36,7 +36,7 @@ public class ListarProdutos {
 
 			}
 		}else {
-			System.out.println("Não há produtos cadastrados");
+			System.out.println("Não há Produtos Cadastrados");
 			
 		}
 				
@@ -53,6 +53,7 @@ public class ListarProdutos {
 			System.exit(0);
 		}
 	
+		s.close();
 		
 	}
 

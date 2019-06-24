@@ -20,7 +20,8 @@ public class MenuPrincipal {
 		System.out.println("| 4 - Listar Produtos              |");
 		System.out.println("| 5 - Registrar Entrada no Estoque |");
 		System.out.println("| 6 - Registrar Venda              |");
-		System.out.println("| 7 - Estoque                      |");
+		System.out.println("| 7 - Listar Vendas                |");
+		System.out.println("| 8 - Estoque                      |");
 		System.out.println("| 0 - Sair                         |");
 		System.out.println("====================================");
 
@@ -52,7 +53,7 @@ public class MenuPrincipal {
 				RegistrarVenda.main(args);
 				break;
 			case 7:
-	
+				ListarVendas.main(args);
 				break;
 			case 0:
 	
