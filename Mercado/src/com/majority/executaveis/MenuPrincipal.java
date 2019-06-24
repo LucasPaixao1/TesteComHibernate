@@ -46,10 +46,10 @@ public class MenuPrincipal {
 				ListarProdutos.main(args);
 				break;
 			case 5:
-	
+				RegistrarEntrada.main(args);
 				break;
 			case 6:
-	
+				RegistrarVenda.main(args);
 				break;
 			case 7:
 	
