@@ -55,8 +55,11 @@ public class MenuPrincipal {
 			case 7:
 				ListarVendas.main(args);
 				break;
+			case 8:
+				Estoque.main(args);
+				break;
 			case 0:
-	
+				System.exit(0);
 				break;
 			default:
 				break;
