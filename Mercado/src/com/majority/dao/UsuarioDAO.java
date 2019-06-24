@@ -3,6 +3,7 @@ package com.majority.dao;
 import javax.persistence.EntityManager;
 
 import com.majority.UtilJPA.UtilJPA;
+import com.majority.executaveis.Index;
 import com.majority.modelos.Usuario;
 import com.majority.validadores.ValidaUsuario;
 
@@ -44,6 +45,14 @@ public class UsuarioDAO {
 		em.persist(usuario);
 		em.getTransaction().commit();
 		
+		System.out.println("\n=====================================");
+		System.out.println("* Usuário Cadastrado com Sucesso!!! *");
+		System.out.println("=====================================\n");
+		
+		System.out.println("==================================================");
+		System.out.println();
+		
+		Index.main(null);
 	}
 	
 	

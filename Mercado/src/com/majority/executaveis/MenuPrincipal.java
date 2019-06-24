@@ -7,6 +7,10 @@ public class MenuPrincipal {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 
+		System.out.println();
+		System.out.println("==============================================================================================================");
+		System.out.println();
+		
 		System.out.println("====================================");
 		System.out.println("|         Menu Principal           |");
 		System.out.println("====================================");
@@ -20,9 +24,12 @@ public class MenuPrincipal {
 		System.out.println("| 0 - Sair                         |");
 		System.out.println("====================================");
 
-		System.out.println("\nInforme a opção desejada: ");
+		System.out.print("\nInforme a opção desejada: ");
 		int opcao = s.nextInt();
-
+		
+		System.out.println();
+		System.out.println("==============================================================================================================");
+		System.out.println();
 		switch (opcao) {
 		
 			case 1:

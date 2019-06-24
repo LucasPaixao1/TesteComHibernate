@@ -11,8 +11,9 @@ public class CadastroDeUsuario {
 		Usuario usuario = new Usuario();
 		Scanner s = new Scanner(System.in);
 		
+		boolean confirmou = true;
 		System.out.print("=======================\n"
-						  +"* Cadastro de usuario *\n"
+						  +"* Cadastro de Usuario *\n"
 						  +"=======================\n"
 						  + "\nInforme seu login: "
 						  );
@@ -24,11 +25,18 @@ public class CadastroDeUsuario {
 		System.out.print("\nConfirme sua senha: ");
 		String senha2 = s.next();
 		
+		System.out.println();
+		
 		UsuarioDAO dao = new UsuarioDAO();
 		
 		if(senha2.equals(usuario.getSenha())) {
 			
 			dao.cadastraUsuario(usuario);
+			
+		}else {
+			
+			System.out.println("As senhas não são iguais");
+			confirmou = false;
 			
 		}
 		

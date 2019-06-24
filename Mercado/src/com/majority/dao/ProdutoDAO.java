@@ -21,8 +21,12 @@ public class ProdutoDAO {
 	public void cadastroProduto(Produto produto) {
 		em.persist(produto);
 		em.getTransaction().commit();
-		System.out.println("Cadastro Efetuado com Sucesso!!!");
-		MenuPrincipal.main(null);
+		
+		System.out.println("\n====================================");
+		System.out.println("* Cadastro Efetuado com Sucesso!!! *");
+		System.out.println("====================================\n");
+		
+		//MenuPrincipal.main(null);
 	}
 
 	public void alterarProduto(Produto produto) {
@@ -31,17 +35,21 @@ public class ProdutoDAO {
 		produtoOriginal.setValor(produto.getValor());
 		em.getTransaction().commit();
 		
-		System.out.println("Produto Alterado com Sucesso!!!");
-		MenuPrincipal.main(null);
+		System.out.println("\n===================================");
+		System.out.println("* Produto Alterado com Sucesso!!! *");
+		System.out.println("===================================\n");
+
 	}
 
 	public void excluirProduto(Produto produto) {
 		Produto produtoOriginal = em.find(Produto.class, produto.getId());
 		em.remove(produtoOriginal);
 		em.getTransaction().commit();
-		System.out.println("Produto Excluido com Sucesso!!!");
 		
-		MenuPrincipal.main(null);
+		System.out.println("\n===================================");
+		System.out.println("* Produto Excluido com Sucesso!!! *");
+		System.out.println("===================================\n");
+		
 	}
 
 	public List<Produto> listarProdutos() {
