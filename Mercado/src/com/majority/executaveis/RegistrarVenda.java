@@ -37,10 +37,7 @@ public class RegistrarVenda {
 		String resposta = s.next().toUpperCase();
 		
 		if(resposta.equals("S")) {
-			System.out.println();
-			System.out.println("==============================================================================================================");
-			System.out.println();
-			
+
 			MenuPrincipal.main(args);
 		}else {
 			System.exit(0);

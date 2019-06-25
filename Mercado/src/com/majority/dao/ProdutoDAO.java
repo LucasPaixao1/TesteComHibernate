@@ -15,10 +15,11 @@ public class ProdutoDAO {
 	
 	public ProdutoDAO(){
 		em = new UtilJPA().getEntityManager();
-		em.getTransaction().begin();
 	}
 
 	public void cadastroProduto(Produto produto) {
+		em.getTransaction().begin();	
+		
 		em.persist(produto);
 		em.getTransaction().commit();
 		
@@ -30,6 +31,7 @@ public class ProdutoDAO {
 	}
 
 	public void alterarProduto(Produto produto) {
+		em.getTransaction().begin();
 
 		Produto produtoOriginal = em.find(Produto.class, produto.getId());
 		produtoOriginal.setValor(produto.getValor());
@@ -42,6 +44,8 @@ public class ProdutoDAO {
 	}
 
 	public void excluirProduto(Produto produto) {
+		em.getTransaction().begin();
+		
 		Produto produtoOriginal = em.find(Produto.class, produto.getId());
 		em.remove(produtoOriginal);
 		em.getTransaction().commit();
@@ -53,6 +57,7 @@ public class ProdutoDAO {
 	}
 
 	public List<Produto> listarProdutos() {
+		em.getTransaction().begin();
 
 		Query query = em.createQuery("select p from Produto p");
 		List<Produto> produtos = query.getResultList();

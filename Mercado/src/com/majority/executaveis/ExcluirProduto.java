@@ -8,12 +8,13 @@ import com.majority.modelos.Produto;
 public class ExcluirProduto {
 
 	public static void main(String[] args) {
-		Produto produto = new Produto();
 		Scanner s = new Scanner(System.in);
 
 		String resposta = "";
 
 		do {
+			Produto produto = new Produto();
+			
 			System.out.println("===================");
 			System.out.println("* Excluir Produto *");
 			System.out.println("===================");
@@ -36,6 +37,11 @@ public class ExcluirProduto {
 				System.out.println();
 
 				MenuPrincipal.main(args);
+			} else {
+				System.out.println();
+				System.out.println(
+						"==============================================================================================================");
+				System.out.println();
 			}
 
 		} while (resposta.equals("N"));
