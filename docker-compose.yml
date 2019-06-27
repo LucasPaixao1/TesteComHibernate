@@ -1,0 +1,30 @@
+version: "3"
+
+volumes:
+  data:
+
+services:
+  Aplicacao:
+    image: lucasbpaixao/mercado
+    container_name: Mercado
+    networks: 
+      - my-network
+    depends_on: 
+      - Mysql
+
+  Mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - data:/var/www/
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "Mercado"  
+    container_name: mysql
+    networks: 
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge 

@@ -18,11 +18,23 @@ public class Index {
 
 		System.out.println();
 		if (res) {
+			
+			try {
+				limpaTela();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 
 			CadastroDeUsuario.main(args);
 
 		} else {
 
+			try {
+				limpaTela();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
 			System.out.println("==========");
 			System.out.println("* Login *");
 			System.out.println("==========\n");
